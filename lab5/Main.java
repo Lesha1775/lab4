@@ -10,12 +10,12 @@ public class Main {
         library2 = new Library("Сообщество библиотек");
         scanner = new Scanner(System.in);
 
-        library1.addBook(new Book("1984", "Джордж Оруэлл", 1949));
-        library1.addBook(new Book("Скотный двор", "Джордж Оруэлл", 1945));
-        library1.addBook(new Book("Убить пересмешника", "Харпер Ли", 1960));
+        library1.addBook(new Book("1984", "Фёдор Достоевский", 1949));
+        library1.addBook(new Book("Преступление и наказание", "Фёдор Достоевский", 1945));
+        library1.addBook(new Book("Война и мир", "Лев толстой ", 1960));
 
-        library2.addBook(new Book("О дивный новый мир", "Олдос Хаксли", 1932));
-        library2.addBook(new Book("1984", "Джордж Оруэлл", 1949));
+        library2.addBook(new Book("Антон Чехов", "Три сестры", 1932));
+        library2.addBook(new Book("1984", "Фёдор Достоевский", 1949));
     }
 
     public void addBookFromUserInput() {
@@ -62,7 +62,7 @@ public class Main {
 
     public void displaySpecificBookInfo() {
         System.out.println("\nИнформация о конкретной книге:");
-        library1.getBooksByAuthor("Джордж Оруэлл").get(0).displayInfo();
+        library1.getBooksByAuthor("Фёдор Достоевский").get(0).displayInfo();
     }
 
     public void displayAllBooks() {
@@ -74,7 +74,7 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.displayBooksByAuthor("Джордж Оруэлл");
+        main.displayBooksByAuthor("Фёдор Достоевский");
         main.displaySpecificBookInfo();
 
         main.addBookFromUserInput();
